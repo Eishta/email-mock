@@ -1,0 +1,118 @@
+:root {
+  --ascent: #e54065;
+  --background: #f4f5f9;
+  --border: #cfd2dc;
+  --text: #636363;
+  --filter-btn: #e1e4ea;
+  --read-bgrnd: #f2f2f2;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--text);
+  font-family: sans-serif;
+}
+.App {
+  background-color: var(--background);
+  overflow: hidden;
+}
+
+header {
+  background-color: var(--ascent);
+  padding: 1rem;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+header span {
+  background-color: inherit;
+  color: inherit;
+}
+input {
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+.filter-bar {
+  background-color: var(--background);
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  color: var(--text);
+}
+.filter-bar button {
+  background-color: var(--filter-btn);
+  padding: 0.5rem;
+  border: 1px solid grey;
+  border-radius: 15px;
+  color: var(--text);
+  cursor: pointer;
+  /* transition: all 0.5s; */
+}
+.filter-bar button:hover {
+  transform: scale(1.02);
+}
+
+.filter-bar button.active {
+  border: 1px solid var(--ascent);
+  color: var(--ascent);
+}
+
+main {
+  padding: 1rem;
+  background-color: var(--background);
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 1rem;
+  height: 90vh;
+  overflow: auto;
+}
+main.show-detail {
+  grid-template-columns: 1fr 2fr;
+}
+.email-list {
+  overflow: scroll;
+}
+.email-detail {
+  flex-basis: 80%;
+}
+
+/* Email Item */
+article {
+  border-radius: 10px;
+  background-color: white;
+  border: 1px solid grey;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+.avatar {
+  text-transform: capitalize;
+  padding: 1rem;
+  background-color: var(--ascent);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  color: white;
+}
+.info span {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+article {
+  display: flex;
+  gap: 1rem;
+  cursor: pointer;
+}
+article:hover,
+article.selected {
+  border: 1px solid var(--ascent);
+  background-color: var(--background);
+}
+article p {
+  margin-bottom: 4px;
+}

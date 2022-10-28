@@ -1,0 +1,3 @@
+export const GET_ALL_EMAILS = "GET_ALL_EMAILS";
+export const GET_EMAIL_DETAIL_BY_ID = "GET_EMAIL_DETAIL_BY_ID";
+export const SELECT_EMAIL = "SELECT_EMAIL";
